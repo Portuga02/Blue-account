@@ -4,14 +4,14 @@ require 'environment.php';
 global $config;
 $config = array();
 if(ENVIRONMENT == 'development') {
-	$config['dbname'] = 'blog';
+	$config['dbname'] = 'conta_azul';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'root';
+	$config['dbpass'] = '';
 } else {
-	$config['dbname'] = 'blog';
+	$config['dbname'] = 'conta_azul';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'root';
+	$config['dbpass'] = '';
 }
 ?>

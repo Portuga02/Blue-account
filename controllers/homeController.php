@@ -1,16 +1,18 @@
 <?php
+
 class homeController extends controller {
 
     public function __construct() {
         parent::__construct();
+        $user = new UsersModel();
+        if($user->isLogged == false) {
+            header("Location:".BASE_URL."/Login");
+        }
     }
 
     public function index() {
-        $dados = array();
-        
-        $posts = new Posts();
-        $dados['posts'] = $posts->getPosts(10);        
-        
+        $dados =[];
+
         $this->loadTemplate('home', $dados);
     }
 

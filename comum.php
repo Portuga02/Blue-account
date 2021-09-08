@@ -1,8 +1,8 @@
 <?php
 try {
-	$dsn = "mysql:dbname=blog;host=localhost";
+	$dsn = "mysql:dbname=conta_azul;host=localhost";
 	$dbuser = "root";
-	$dbpass = "root";
+	$dbpass = "";
 	$pdo = new PDO($dsn, $dbuser, $dbpass);
 
 } catch(PDOException $e) {
