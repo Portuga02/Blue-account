@@ -13,7 +13,7 @@
                 <form method="POST" action="LoginController.php" class="containers">
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email">
+                            <input class="input" type="email" placeholder="Email" name="email">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="field">
                         <p class="control has-icons-left">
-                            <input class="input" type="password" placeholder="Password">
+                            <input class="input" type="password" placeholder="Password" name="password">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="field">
                         <p class="control">
-                            <button class="button is-success">
+                            <button class="button is-success" value="Entrar">
                                 Login
                             </button>
                         </p>
