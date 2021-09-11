@@ -1,6 +1,6 @@
 <?php
 
-class homeController extends controller {
+class HomeController extends controller {
 
     public function __construct() {
         parent::__construct();
@@ -13,7 +13,7 @@ class homeController extends controller {
     public function index() {
         $dados =[];
 
-        $this->loadTemplate('home', $dados);
+        $this->loadTemplate('Home', $dados);
     }
 
 }

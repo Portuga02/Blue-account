@@ -15,7 +15,21 @@ class LoginController extends controller {
 
     public function index() {
         $data = [];
-        $this->loadView('login', $data);
+        
+        if (isset($_POST['email']) && !empty($_POST['email'])) {
+            $email = addslashes($_POST['email']);
+            $password = addslashes($_POST['password']);
+            
+            $user = new UsersModel();
+
+            if ($user->doLogin($email, $password)) {
+                header("Location:" . BASE_URL);
+            } else {
+                $data['error'] = 'Email ou senha errados';
+            }
+        }
+
+        $this->loadView('Login', $data);
     }
 
 }

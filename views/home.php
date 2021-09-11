@@ -1,3 +1,1 @@
-<h1>Notícias</h1>
-
-<?php echo "Olá mundo"; ?>
+<?php echo "HOME DO SISTEMA"; ?>
