@@ -14,18 +14,20 @@
 class LoginController extends controller {
 
     public function index() {
+
         $data = [];
-        
+
         if (isset($_POST['email']) && !empty($_POST['email'])) {
             $email = addslashes($_POST['email']);
-            $password = addslashes($_POST['password']);
-            
+            $pass = addslashes($_POST['password']);
+
             $user = new UsersModel();
 
-            if ($user->doLogin($email, $password)) {
-                header("Location:" . BASE_URL);
+            if ($user->doLogin($email, $pass)) {
+                header("Location: " . BASE_URL);
+                exit;
             } else {
-                $data['error'] = 'Email ou senha errados';
+                $data['error'] = 'E-mail e/ou senha errados.';
             }
         }
 
