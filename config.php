@@ -3,7 +3,7 @@
 require 'environment.php';
 
 global $config;
-$config = array();
+$config = [];
 if (ENVIRONMENT == 'development') {
     $config['dbname'] = 'conta_azul';
     $config['host'] = 'localhost';
@@ -15,4 +15,3 @@ if (ENVIRONMENT == 'development') {
     $config['dbuser'] = 'root';
     $config['dbpass'] = '';
 }
-?>
