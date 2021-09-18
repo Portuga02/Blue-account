@@ -1,8 +1,11 @@
 <html>
-    <head>
-        <title>Template</title>
-    </head>
-    <body>
 
-    </body>
+<head>
+    <title>Template</title>
+</head>
+
+<body>
+
+</body>
+
 </html>

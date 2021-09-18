@@ -1,12 +1,14 @@
 <?php
 
-class core {
+class core
+{
 
-    public function run() {
+    public function run()
+    {
         $url = explode('index.php', $_SERVER['PHP_SELF']);
         $url = end($url);
 
-        $params = array();
+        $params = [];
         if (!empty($url) && $url != '/') {
             $url = explode('/', $url);
             array_shift($url);
@@ -32,5 +34,4 @@ class core {
         $c = new $currentController();
         call_user_func_array(array($c, $currentAction), $params);
     }
-
 }

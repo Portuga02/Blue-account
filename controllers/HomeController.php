@@ -1,8 +1,10 @@
 <?php
 
-class HomeController extends controller {
+class HomeController extends controller
+{
 
-     public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $user = new UsersModel();
         if ($user->isLogged() == false) {
@@ -10,10 +12,10 @@ class HomeController extends controller {
         }
     }
 
-    public function index() {
+    public function index()
+    {
         $data = [];
 
         $this->loadTemplate('Home', $data);
     }
-
 }

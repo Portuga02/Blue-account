@@ -11,9 +11,11 @@
  *
  * @author savio
  */
-class LoginController extends controller {
+class LoginController extends controller
+{
 
-    public function index() {
+    public function index()
+    {
 
         $data = [];
 
@@ -33,5 +35,4 @@ class LoginController extends controller {
 
         $this->loadView('Login', $data);
     }
-
 }
