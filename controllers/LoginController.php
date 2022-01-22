@@ -5,9 +5,7 @@ class LoginController extends controller
 
     public function index()
     {
-
         $data = [];
-
         if (isset($_POST['email']) && !empty($_POST['email'])) {
             $email = addslashes($_POST['email']);
             $pass = addslashes($_POST['password']);
@@ -18,10 +16,10 @@ class LoginController extends controller
                 header("Location: " . BASE_URL);
                 exit;
             } else {
-                $data['error'] = 'E-mail e/ou senha errados.';
+                $data['error'] = 'E-mail ou senha incorretos.';
             }
         }
 
-        $this->loadView('Login', $data);
+        $this->loadView('login', $data);
     }
 }
