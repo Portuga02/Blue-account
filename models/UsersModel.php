@@ -42,7 +42,6 @@ class UsersModel extends Model {
         try {
             if (isset($_SESSION['Account']) && !empty($_SESSION['Account'])) {
                 $id = $_SESSION['Account'];
-
                 $sql = $this->db->prepare("SELECT * FROM users WHERE id = :id");
                 $sql->bindValue(':id', $id);
                 $sql->execute();
@@ -60,7 +59,7 @@ class UsersModel extends Model {
 
         try {
             if (isset($this->userInfo['id_company'])) {
-                return $this->userInfo;
+                return $this->userInfo['id_company'];
             } else {
                 return 0;
             }
