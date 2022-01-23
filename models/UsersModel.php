@@ -1,13 +1,13 @@
 <?php
+
 require_once 'helpers/erros.php';
-class UsersModel extends Model
-{
+
+class UsersModel extends Model {
     /* verificando se o usuário é cadastrado no sistema */
 
-    private  $userInfo;
+    private $userInfo;
 
-    public function isLogged()
-    {
+    public function isLogged() {
         try {
             if (isset($_SESSION['Account']) && !empty($_SESSION['Account'])) {
                 return true;
@@ -19,8 +19,7 @@ class UsersModel extends Model
         }
     }
 
-    public function doLogin($email, $password)
-    {
+    public function doLogin($email, $password) {
         try {
             $sql = $this->db->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
             $sql->bindValue(':email', $email);
@@ -39,8 +38,7 @@ class UsersModel extends Model
         }
     }
 
-    public function setLoggedUser()
-    {
+    public function setLoggedUser() {
         try {
             if (isset($_SESSION['Account']) && !empty($_SESSION['Account'])) {
                 $id = $_SESSION['Account'];
@@ -50,7 +48,7 @@ class UsersModel extends Model
                 $sql->execute();
 
                 if ($sql->rowCount() > 0) {
-                    $this->userInfo  = $sql->fetch();
+                    $this->userInfo = $sql->fetch();
                 }
             }
         } catch (\Throwable $th) {
@@ -58,17 +56,17 @@ class UsersModel extends Model
         }
     }
 
-    public function getCompany()
-    {
+    public function getCompany() {
 
         try {
             if (isset($this->userInfo['id_company'])) {
                 return $this->userInfo;
-            } else{
+            } else {
                 return 0;
             }
         } catch (\Throwable $th) {
             MostrarErrorException($th);
         }
     }
+
 }

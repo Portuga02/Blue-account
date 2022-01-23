@@ -15,11 +15,10 @@ class HomeController extends controller
     public function index()
     {
 
-        $data = [];
-        $user = new UsersModel();
-        $user->setLoggedUser();
-        $company  = new CompaniesModel($user->getCompany());
-
+  $data = array();
+        $u = new UsersModel();
+        $u->setLoggedUser();
+        $company = new CompaniesModel($u->getCompany());
         $data['company_name'] = $company->getName();
 
         $this->loadTemplate('home', $data);
