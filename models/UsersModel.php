@@ -68,4 +68,16 @@ class UsersModel extends Model {
         }
     }
 
+    public function getUserEmail() {
+        try {
+            if (isset($this->userInfo['email'])) {
+                return $this->userInfo['email'];
+            } else {
+                return '';
+            }
+        } catch (\Throwable $th) {
+            MostrarErrorException($th);
+        }
+    }
+
 }

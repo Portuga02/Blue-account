@@ -6,7 +6,7 @@ class Core {
         $url = explode('index.php', $_SERVER['PHP_SELF']);
         $url = end($url);
 
-        $params = array();
+        $params = [];
         if (!empty($url) && $url != '/') {
             $url = explode('/', $url);
             array_shift($url);
