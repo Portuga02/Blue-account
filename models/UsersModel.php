@@ -80,4 +80,13 @@ class UsersModel extends Model {
         }
     }
 
+    public function logout() {
+        try {
+             unset($_SESSION['Account']);
+        } catch (\Throwable $th) {
+            MostrarErrorException($th);
+        }
+       
+    }
+
 }

@@ -3,7 +3,7 @@
 class Core {
 
     public function run() {
-        $url = explode('index.php', $_SERVER['PHP_SELF']);
+        $url = explode('index.php', filter_input(INPUT_SERVER, 'PHP_SELF'));
         $url = end($url);
 
         $params = [];

@@ -1,10 +1,10 @@
 <?php
 
-class LoginController extends controller
-{
+require_once 'helpers/erros.php';
 
-    public function index()
-    {
+class LoginController extends controller {
+
+    public function index() {
         $data = [];
         if (isset($_POST['email']) && !empty($_POST['email'])) {
             $email = addslashes($_POST['email']);
@@ -22,4 +22,15 @@ class LoginController extends controller
 
         $this->loadView('login', $data);
     }
+
+    public function logout() {
+        try {
+            $user = new UsersModel();
+            $user->logout();
+            header("Location:" . BASE_URL);
+        } catch (\Throwable $th) {
+            MostrarErrorException($th);
+        }
+    }
+
 }
