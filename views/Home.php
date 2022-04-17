@@ -185,7 +185,7 @@
                                 <span class="float-right text-muted text-sm">2 days</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="<?php echo BASE_URL . '/login/logout' ?>" class="dropdown-item dropdown-footer"><i class="fas fa-sign-out-alt"></i>logout</a>
+                            <a href="<?php echo BASE_URL . '/Login/logout' ?>" class="dropdown-item dropdown-footer"><i class="fas fa-sign-out-alt"></i>logout</a>
                         </div>
                     </li>
                 </ul>

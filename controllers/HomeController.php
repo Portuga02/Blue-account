@@ -5,6 +5,7 @@ require_once 'helpers/erros.php';
 class HomeController extends controller {
 
     public function __construct() {
+        
         parent::__construct();
         $user = new UsersModel();
         if ($user->isLogged() == false) {
@@ -21,7 +22,7 @@ class HomeController extends controller {
         $data['company_name'] = $company->getName();
         $data['user_email'] = $user->getUserEmail();
 
-        $this->loadTemplate('home', $data);
+        $this->loadTemplate('Home', $data);
     }
 
 }

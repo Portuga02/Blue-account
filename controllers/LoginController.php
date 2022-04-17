@@ -1,6 +1,6 @@
 <?php
 
-require_once 'helpers/erros.php';
+
 
 class LoginController extends controller {
 

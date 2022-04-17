@@ -12,6 +12,7 @@ class Core {
             array_shift($url);
 
             $currentController = $url[0] . 'Controller';
+           
             array_shift($url);
 
             if (isset($url[0])) {
@@ -25,11 +26,12 @@ class Core {
                 $params = $url;
             }
         } else {
-            $currentController = 'homeController';
+            $currentController = 'HomeController';
             $currentAction = 'index';
         }
 
         $c = new $currentController();
+      
         call_user_func_array(array($c, $currentAction), $params);
     }
 

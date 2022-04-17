@@ -7,12 +7,12 @@ global $config;
 $config = [];
 try {
     if (ENVIRONMENT == 'development') {
-        $config['dbname'] = 'blue_account';
+        $config['dbname'] = 'conta_azul';
         $config['host'] = 'localhost';
         $config['dbuser'] = 'root';
         $config['dbpass'] = '';
     } else {
-        $config['dbname'] = 'blue_account';
+        $config['dbname'] = 'conta_azul';
         $config['host'] = 'localhost';
         $config['dbuser'] = 'root';
         $config['dbpass'] = '';
