@@ -32,7 +32,7 @@
 
 <body class="sidebar-mini layout-fixed text-sm">
     <div class="wrapper">
-
+   
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
@@ -245,7 +245,7 @@
 
                         <li class="nav-item">
                             <a href="<?php  echo  BASE_URL;?>" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     HOME
                                     <span class="right badge badge-danger">New</span>
@@ -253,8 +253,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
+                            <a href="<?php  echo BASE_URL?>/permissions" class="nav-link">
+                                <i class="nav-icon fas fa-key"></i>
                                 <p>
                                     Permissões
 
@@ -266,7 +266,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-chart-pie"></i>
                                 <p>
-                                    Permissões
+                                    -----
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -794,6 +794,7 @@
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
+            
             <!-- /.sidebar -->
         </aside>
 
@@ -804,7 +805,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard</h1>
+                            <h1 class="m-0"> <?php  $this->loadViewInTemplate( $viewName,$viewData);?></h1>
                         </div><!-- /.col -->
 
                     </div><!-- /.row -->
@@ -830,6 +831,7 @@
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
+       
     </div>
     <!-- ./wrapper -->
 
