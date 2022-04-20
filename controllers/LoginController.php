@@ -1,10 +1,9 @@
 <?php
+class LoginController extends controller
+{
 
-
-
-class LoginController extends controller {
-
-    public function index() {
+    public function index()
+    {
         $data = [];
         if (isset($_POST['email']) && !empty($_POST['email'])) {
             $email = addslashes($_POST['email']);
@@ -16,14 +15,15 @@ class LoginController extends controller {
                 header("Location: " . BASE_URL);
                 exit;
             } else {
-                $data['error'] = 'E-mail ou senha incorretos.';
+                $data['error'] = 'E-mail ou senha  estão incorretos.';
             }
         }
 
         $this->loadView('login', $data);
     }
 
-    public function logout() {
+    public function logout()
+    {
         try {
             $user = new UsersModel();
             $user->logout();
@@ -32,5 +32,4 @@ class LoginController extends controller {
             MostrarErrorException($th);
         }
     }
-
 }
