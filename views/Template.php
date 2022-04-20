@@ -804,7 +804,7 @@
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-12">
-                        <div class="col-sm-12">
+                        <div class="col-xs-12">
                             <h1 class="m-0"> <?php  $this->loadViewInTemplate( $viewName,$viewData);?></h1>
                         </div><!-- /.col -->
 
