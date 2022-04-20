@@ -1,8 +1,5 @@
 <?php
-
-require_once 'helpers/erros.php';
-
-class HomeController extends controller
+class PermissionsController extends controller
 {
 
     public function __construct()
@@ -17,14 +14,12 @@ class HomeController extends controller
 
     public function index()
     {
-
         $data = [];
         $user = new UsersModel();
         $user->setLoggedUser();
         $company = new CompaniesModel($user->getCompany());
         $data['company_name'] = $company->getName();
         $data['user_email'] = $user->getUserEmail();
-
-        $this->loadTemplate('Home', $data);
+        $this->loadTemplate('Permissions', $data);
     }
 }

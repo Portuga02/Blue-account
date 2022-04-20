@@ -253,7 +253,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php  echo BASE_URL?>/permissions" class="nav-link">
+                            <a href="<?php  echo BASE_URL?>/Permissions" class="nav-link">
                                 <i class="nav-icon fas fa-key"></i>
                                 <p>
                                     Permissões
@@ -803,8 +803,8 @@
             <!-- Content Header (Page header) -->
             <div class="content-header">
                 <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
+                    <div class="row mb-12">
+                        <div class="col-sm-12">
                             <h1 class="m-0"> <?php  $this->loadViewInTemplate( $viewName,$viewData);?></h1>
                         </div><!-- /.col -->
 

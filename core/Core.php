@@ -12,7 +12,7 @@ class Core {
             array_shift($url);
 
             $currentController = $url[0] . 'Controller';
-           
+                    
             array_shift($url);
 
             if (isset($url[0])) {
