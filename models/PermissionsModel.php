@@ -11,7 +11,7 @@ class PermissionsModel extends Model {
             $this->group = $id;
             $this->permissions = [];
 
-            $sql  = $this->db->prepare( "SELECT params FROM permission_groups WHERE id = :id AND id_company = :id_company" );
+            $sql  = $this->db->prepare( 'SELECT params FROM permission_groups WHERE id = :id AND id_company = :id_company' );
             $sql->bindValue( ':id', $id );
             $sql->bindValue( ':id_company', $id_company );
             $sql->execute();
@@ -43,7 +43,7 @@ class PermissionsModel extends Model {
             MostrarErrorException( $th );
         }
         var_dump( $this->permissions );
-        exit;
+       
     }
 
     public function hasPermission( $name ) {

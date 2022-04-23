@@ -1,5 +1,6 @@
 <?php
 include_once 'helpers/erros.php';
+
 class LoginController extends controller
  {
 
